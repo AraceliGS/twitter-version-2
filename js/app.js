@@ -33,7 +33,15 @@ window.addEventListener('load', function() {
     // Estableciendo el evento keyup a mi etiqueta textarea cuyo valor de su atributo ID es comment.
     $('#comment').keyup(function numberOfCharactersEntered() {
       var newCharacters = maxLength - $('#comment').val().length; // Estableciendo como valor a la variable newCharacters la resta entre el número máximo de caracteres aceptados y el número de caracteres ingresados hasta el momento .
-      $('#counter').html(newCharacters); // Utilizando el método html para establecer a mi etiqueta label cuyo valor de su atributo ID es counter, el valor de la variable newCharacters
+      $('#counter').html(newCharacters); // Utilizando el método html para establecer a mi etiqueta label cuyo valor de su atributo ID es counter, el valor de la variable newCharacters.
+
+      if (newCharacters < 0) { // Esta condición se cumple cuando se ha pasado de los 140 caracteres.
+        $(button).attr('disabled', 'true'); // Este método me permite asignarle al botón el atributo disabled(deshabilitado en español)al button cuyo valor es true para que lo deshabilite.
+        $(button).addClass('disabled'); // El método addClass me permite añadirle la clase disabled a la etiqueta button.
+      } else {
+        $(button).removeAttr('disabled'); // Remuevo este atributo para tener mi botón habilitado si es que no em he pasado de los 140 caracteres.
+        $(button).removeClass('disabled'); // Con el método removeClass puedo remover esta clase para que cuando mi número de caracteres no se pase de los 140, pueda tener habilitado el boton y no se 'estanque' en el estilo anterior aplicado por esta clase.
+      }
     });
   });
 });

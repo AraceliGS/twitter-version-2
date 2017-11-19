@@ -1,8 +1,9 @@
 /* Colores a usar:
-   Color de background: 13BEEC;
-   Color de título: #FFF;
+   Color de background: 13BEEC
+   Color de título: #FFF
    Azul oscuro: #1F618D
-   Plomizo claro: #EFEFEF
+   Plomizo claro(para la línea horizontal del primer div y el color de fondo del button cuando está deshabilitado): #EFEFEF
+   Color de texto del button cuando está deshabilitado: #A6ACAF
 */
 
 /* Estilos generales */
@@ -132,6 +133,8 @@
     
   }
   
+  /* Estilos para el botón cuando está habilitado */
+
   button {
     border: none;
     outline: 0;
@@ -140,6 +143,13 @@
     padding: 2% 5%;
     text-transform: uppercase;
     font-weight: 800;
+  }
+
+  /* Estilos para el botón cuando está deshabilitado */
+
+  .disabled {
+    color: #A6ACAF;
+    background-color: #EFEFEF;
   }
   
   /* Estilos para la sección y las cajas contenidas en él */
