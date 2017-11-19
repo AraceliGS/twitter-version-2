@@ -125,11 +125,11 @@
     margin: 3% 0 5%;
   }
   
-  label {
+  #counter {
     font-size: 1.9em;
     color: #1F618D;
     float: right;
-    margin-left: 5%;
+    
   }
   
   button {
